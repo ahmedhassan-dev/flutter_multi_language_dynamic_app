@@ -1,15 +1,18 @@
+import 'package:bloc/bloc.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/local_storage/Prefs.dart';
+import 'core/simple_bloc_observer.dart';
 import 'core/view/application.dart';
 import 'generated/codegen_loader.g.dart';
 
 Future<void> main() async {
-  await Prefs.init();
   WidgetsFlutterBinding.ensureInitialized();
+  await Prefs.init();
   await EasyLocalization.ensureInitialized();
+  Bloc.observer = SimpleBlocObserver();
   runApp(
     EasyLocalization(
       supportedLocales: const [Locale('en'), Locale('ar')],

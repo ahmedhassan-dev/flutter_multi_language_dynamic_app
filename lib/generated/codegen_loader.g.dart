@@ -14,7 +14,13 @@ class CodegenLoader extends AssetLoader{
     return Future.value(mapLocales[locale.toString()]);
   }
 
-  static const Map<String,dynamic> _ar = {};
-static const Map<String,dynamic> _en = {};
+  static const Map<String,dynamic> _ar = {
+  "No Internet Connection": "لا يوجد اتصال بالشبكة",
+  "Please check your connection.": "برجاء التأكد من اتصالك بالشبكة."
+};
+static const Map<String,dynamic> _en = {
+  "No Internet Connection": "No Internet Connection",
+  "Please check your connection.": "Please check your connection."
+};
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": _ar, "en": _en};
 }
