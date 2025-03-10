@@ -5,7 +5,7 @@ import 'package:flutter_multi_language_dynamic_app/features/onboarding/logic/onb
 import 'core/screen_handler/app_no_connection.dart';
 
 class LandingPage extends StatefulWidget {
-  const LandingPage({super.key, required this.title});
+  const LandingPage({super.key, this.title = "test"});
 
   final String title;
 

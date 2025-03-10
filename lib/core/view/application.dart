@@ -1,9 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_multi_language_dynamic_app/features/onboarding/logic/onboarding_cubit.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 
-import '../../landing_page.dart';
+import '../router/router.dart';
 
 class Application extends StatelessWidget {
   const Application({super.key});
@@ -11,7 +10,8 @@ class Application extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     context.setLocale(const Locale('ar'));
-    return MaterialApp(
+    final router = AppRouter.router;
+    return MaterialApp.router(
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
@@ -21,10 +21,10 @@ class Application extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: BlocProvider(
-        create: (context) => OnboardingCubit()..checkInternet(),
-        child: const LandingPage(title: 'Flutter Demo Home Page'),
-      ),
+      routerDelegate: router.routerDelegate,
+      routeInformationParser: router.routeInformationParser,
+      routeInformationProvider: router.routeInformationProvider,
+      builder: EasyLoading.init(),
     );
   }
 }
