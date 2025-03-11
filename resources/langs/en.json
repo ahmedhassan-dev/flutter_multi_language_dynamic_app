@@ -17,5 +17,8 @@
     "phone": "Phone",
     "all_fields_required": "All fields are required",
     "invalid_email": "Invalid email address",
-    "invalid_phone": "Invalid phone number"
+    "invalid_phone": "Invalid phone number",
+    "horizontal_scroll": "Horizontal Scroll",
+    "vertical_scroll": "Vertical Scroll",
+    "item": "Item"
 }

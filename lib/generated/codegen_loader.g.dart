@@ -33,7 +33,10 @@ class CodegenLoader extends AssetLoader{
   "phone": "الهاتف",
   "all_fields_required": "جميع الحقول مطلوبة",
   "invalid_email": "بريد إلكتروني غير صالح",
-  "invalid_phone": "رقم هاتف غير صالح"
+  "invalid_phone": "رقم هاتف غير صالح",
+  "horizontal_scroll": "تمرير أفقي",
+  "vertical_scroll": "تمرير عمودي",
+  "item": "عنصر"
 };
 static const Map<String,dynamic> _en = {
   "No Internet Connection": "No Internet Connection",
@@ -54,7 +57,10 @@ static const Map<String,dynamic> _en = {
   "phone": "Phone",
   "all_fields_required": "All fields are required",
   "invalid_email": "Invalid email address",
-  "invalid_phone": "Invalid phone number"
+  "invalid_phone": "Invalid phone number",
+  "horizontal_scroll": "Horizontal Scroll",
+  "vertical_scroll": "Vertical Scroll",
+  "item": "Item"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": _ar, "en": _en};
 }

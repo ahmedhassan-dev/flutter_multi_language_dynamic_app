@@ -17,5 +17,8 @@
     "phone": "الهاتف",
     "all_fields_required": "جميع الحقول مطلوبة",
     "invalid_email": "بريد إلكتروني غير صالح",
-    "invalid_phone": "رقم هاتف غير صالح"
+    "invalid_phone": "رقم هاتف غير صالح",
+    "horizontal_scroll": "تمرير أفقي",
+    "vertical_scroll": "تمرير عمودي",
+    "item": "عنصر"
   }
