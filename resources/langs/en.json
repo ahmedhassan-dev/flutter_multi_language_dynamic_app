@@ -1,4 +1,18 @@
 {
     "No Internet Connection": "No Internet Connection",
-    "Please check your connection.": "Please check your connection."
+    "Please check your connection.": "Please check your connection.",
+    "settings": "Settings",
+    "appName": "Test",
+    "admin": "Admin",
+    "user": "User",
+    "login": "Login",
+    "register": "Register",  
+    "fullName": "Full Name",
+    "username": "Username",
+    "password": "Password",
+    "email": "Email",
+    "phone": "Phone",
+    "all_fields_required": "All fields are required",
+    "invalid_email": "Invalid email address",
+    "invalid_phone": "Invalid phone number"
 }

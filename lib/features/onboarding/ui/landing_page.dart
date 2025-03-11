@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_multi_language_dynamic_app/core/local_storage/Prefs.dart';
+import 'package:flutter_multi_language_dynamic_app/core/router/route_constants.dart';
 import 'package:flutter_multi_language_dynamic_app/features/onboarding/logic/onboarding_cubit.dart';
+import 'package:go_router/go_router.dart';
 
-import 'core/screen_handler/app_no_connection.dart';
+import 'widgets/app_no_connection.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key, this.title = "test"});
@@ -24,7 +27,13 @@ class _LandingPageState extends State<LandingPage> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<OnboardingCubit, OnboardingState>(
+    return BlocConsumer<OnboardingCubit, OnboardingState>(
+      listener: (BuildContext context, OnboardingState state) {
+        if (state is NoInternetConnection) return;
+        if (Prefs.getCurrentUser() == null) {
+          context.pushReplacement(RouteConstants.login);
+        }
+      },
       builder: (context, state) {
         if (state is NoInternetConnection) {
           return const AppNoConnection();

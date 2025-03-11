@@ -1,4 +1,18 @@
 {
     "No Internet Connection": "لا يوجد اتصال بالشبكة",
-    "Please check your connection.": "برجاء التأكد من اتصالك بالشبكة."
-}
+    "Please check your connection.": "برجاء التأكد من اتصالك بالشبكة.",
+    "settings": "الإعدادات",
+    "appName": "تيست",
+    "admin": "ادمن",
+    "user": "مستخدم",
+    "login": "تسجيل الدخول",
+    "register": "تسجيل",
+    "fullName": "الاسم الكامل",
+    "username": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "all_fields_required": "جميع الحقول مطلوبة",
+    "invalid_email": "بريد إلكتروني غير صالح",
+    "invalid_phone": "رقم هاتف غير صالح"
+  }

@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_multi_language_dynamic_app/core/common_utils/app_constant.dart';
+import 'package:flutter_multi_language_dynamic_app/core/local_storage/Prefs.dart';
 
 import '../router/router.dart';
 
@@ -9,7 +11,7 @@ class Application extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.setLocale(const Locale('ar'));
+    context.setLocale(Locale(Prefs.getString(AppConstants.myLanguage) ?? "ar"));
     final router = AppRouter.router;
     return MaterialApp.router(
       localizationsDelegates: context.localizationDelegates,

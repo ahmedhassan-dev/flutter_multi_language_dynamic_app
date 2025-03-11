@@ -3,6 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'core/functions/service_locator.dart';
 import 'core/local_storage/Prefs.dart';
 import 'core/simple_bloc_observer.dart';
 import 'core/view/application.dart';
@@ -11,6 +12,7 @@ import 'generated/codegen_loader.g.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Prefs.init();
+  await configureDependencies();
   await EasyLocalization.ensureInitialized();
   Bloc.observer = SimpleBlocObserver();
   runApp(

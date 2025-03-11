@@ -1,7 +1,8 @@
 // ignore_for_file: file_names, depend_on_referenced_packages
 
+import 'dart:convert';
 
-
+import 'package:flutter_multi_language_dynamic_app/features/authentication/data/models/user_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Prefs {
@@ -17,6 +18,13 @@ class Prefs {
       await _prefs.setString(key, value);
 
   static String? getString(String key) => _prefs.getString(key);
+
+  static UserModel? getCurrentUser() {
+    String? currentUser = _prefs.getString('currentUser');
+    return currentUser != null
+        ? UserModel.fromJson(jsonDecode(currentUser))
+        : null;
+  }
 
   //deletes..
   static Future<bool> remove(String key) async => await _prefs.remove(key);

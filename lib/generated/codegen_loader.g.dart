@@ -16,11 +16,39 @@ class CodegenLoader extends AssetLoader{
 
   static const Map<String,dynamic> _ar = {
   "No Internet Connection": "لا يوجد اتصال بالشبكة",
-  "Please check your connection.": "برجاء التأكد من اتصالك بالشبكة."
+  "Please check your connection.": "برجاء التأكد من اتصالك بالشبكة.",
+  "settings": "الإعدادات",
+  "appName": "تيست",
+  "admin": "ادمن",
+  "user": "مستخدم",
+  "login": "تسجيل الدخول",
+  "register": "تسجيل",
+  "fullName": "الاسم الكامل",
+  "username": "اسم المستخدم",
+  "password": "كلمة المرور",
+  "email": "البريد الإلكتروني",
+  "phone": "الهاتف",
+  "all_fields_required": "جميع الحقول مطلوبة",
+  "invalid_email": "بريد إلكتروني غير صالح",
+  "invalid_phone": "رقم هاتف غير صالح"
 };
 static const Map<String,dynamic> _en = {
   "No Internet Connection": "No Internet Connection",
-  "Please check your connection.": "Please check your connection."
+  "Please check your connection.": "Please check your connection.",
+  "settings": "Settings",
+  "appName": "Test",
+  "admin": "Admin",
+  "user": "User",
+  "login": "Login",
+  "register": "Register",
+  "fullName": "Full Name",
+  "username": "Username",
+  "password": "Password",
+  "email": "Email",
+  "phone": "Phone",
+  "all_fields_required": "All fields are required",
+  "invalid_email": "Invalid email address",
+  "invalid_phone": "Invalid phone number"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": _ar, "en": _en};
 }
