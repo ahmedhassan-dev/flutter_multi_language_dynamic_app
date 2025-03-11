@@ -23,7 +23,7 @@ class AppRouter {
           pageBuilder: (context, state) => MaterialPage(
             key: state.pageKey,
             child: BlocProvider(
-              create: (context) => OnboardingCubit()..checkInternet(),
+              create: (context) => getIt<OnboardingCubit>()..checkInternet(),
               child: const LandingPage(),
             ),
           ),
@@ -34,7 +34,7 @@ class AppRouter {
             key: state.pageKey,
             child: BlocProvider<AuthCubit>.value(
               value: getIt<AuthCubit>(),
-              child: LoginPage(),
+              child: const LoginPage(),
             ),
           ),
         ),
@@ -44,10 +44,17 @@ class AppRouter {
             key: state.pageKey,
             child: BlocProvider<AuthCubit>.value(
               value: getIt<AuthCubit>(),
-              child: RegisterPage(),
+              child: const RegisterPage(),
             ),
           ),
         ),
+        // GoRoute(
+        //   path: RouteConstants.home,
+        //   pageBuilder: (context, state) => MaterialPage(
+        //     key: state.pageKey,
+        //     child: const HomePage(),
+        //   ),
+        // ),
       ]);
 
   const AppRouter._();

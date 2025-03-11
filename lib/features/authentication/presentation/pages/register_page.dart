@@ -3,8 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:go_router/go_router.dart';
-import '../../../../core/common_utils/app_constant.dart';
-import '../../../../core/local_storage/Prefs.dart';
+import '../../../../core/functions/changeLanguage.dart';
 import '../../../../core/router/route_constants.dart';
 import '../../../../core/view/widgets/custom_text_field.dart';
 import '../../../../core/view/widgets/main_button.dart';
@@ -40,9 +39,7 @@ class _RegisterPageState extends State<RegisterPage> {
           IconButton(
             icon: const Icon(Icons.language),
             onPressed: () {
-              final locale = context.locale.languageCode == 'ar' ? 'en' : 'ar';
-              Prefs.setString(AppConstants.myLanguage, locale);
-              context.setLocale(Locale(locale));
+              changeLanguage(context);
             },
           ),
         ],
